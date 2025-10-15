@@ -1,0 +1,1044 @@
+@charset "UTF-8";
+
+/* http://www.nikkenweb.shop/student202207/c3/portfolio */
+
+/* ---------------全体--------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1480px;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* ---------------レイアウト ---------------*/
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    height: auto;
+    /* border: solid 2px #f00; */
+    background-color: #fafefe;
+    border-radius: 20px;
+}
+
+
+/*----------------------------
+scroll_up ｜下から上へ出現
+----------------------------*/
+.scroll_up {
+    transition: 0.9s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  .scroll_up.on {
+    transform: translateY(0);
+    opacity: 1.8;
+  }
+
+
+
+/*---------------ヘッダー--------------- */
+
+header {
+    background-color: #DDE5E5;
+}
+
+
+.header-in {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    margin-top: 10px;
+    margin-left: 28px;
+   width: 140px;
+   height: 140px;
+}
+
+h1 {
+    margin: 0 auto;
+    margin-top: 40px;
+    
+    margin-bottom: 40px;
+}
+
+
+
+/* ---------------ナビ ---------------*/
+
+/* ul {
+    display: flex;
+    justify-content:center;
+}
+
+li {
+    font-size: 26px;
+    font-weight: bold;
+    margin-left: 60px;
+    margin-right: 30px;
+    margin-bottom: 14px;
+    letter-spacing: 3px;
+} */
+
+/* .navi {
+    display: flex;
+    justify-content: center;
+    margin-left: 370px;
+}
+
+#drop-down-menu {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    width: 800px;
+  }
+  #drop-down-menu li {float: left; width: 200px; position: relative;}
+  #drop-down-menu li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    padding: 5px;
+  }
+  #drop-down-menu li:hover a {
+    background-color: #ffffff;
+  }
+  #drop-down-menu1 li:hover ul {
+    display: block;
+  }
+  #drop-down-menu li ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    height: 0px;
+    transition: height 0.2s;
+    z-index: 3;
+  }
+  #drop-down-menu li:hover ul {display: block; height: 200px;}
+  #drop-down-menu li ul a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+  }
+  #drop-down-menu li ul li:hover a {
+    background-color: #cadddd;
+  }
+  #drop-down-menu:after {
+    content: "";
+    clear: both;
+    display: block;
+  } */
+
+  
+
+  li {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+  }
+
+  .navi {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .gnav {
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+    margin: 0 auto;
+    width: 1000px;
+}
+.gnav > li {/*親階層のみ幅を25%にする*/
+    width: 25%;
+}
+/*全てのリスト・リンク共通*/
+.gnav li {
+    list-style: none;
+    position: relative;
+    z-index: 3;
+}
+.gnav li a {
+    background: #DDE5E5;
+    /* border-right: 1px solid #eee; */
+    color: #3c3c3c;
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.gnav li a:hover {
+    background-color: #333333;
+    color: #f5f5f5;
+}
+
+.gnav li li {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+.gnav li li a {
+    /* border-top: 1px solid #eee; */
+    font-size: 20px;
+}
+.gnav li:hover > ul > li {
+    height: 2rem;
+    overflow: visible;
+}
+
+.gnav li:hover a {/*親階層*/
+    background: #DDE5E5;
+    transition: 0.5s;
+}
+.gnav li li a {/*子階層*/
+    background: #a8bfbf;
+    transition: 0.5s;
+}
+.gnav li li:hover a {
+    background: #72979C;
+    transition: 0.5s;
+}
+
+
+/* ---------------メイン画像--------------- */
+
+.mv img {
+    position: relative;
+    z-index: 1;
+}
+
+.mv {
+    position: relative;
+}
+
+.sp {
+    display: none;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.mvtext {
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    margin-top:15%;
+    align-items: center;
+    font-family: 'Noto Serif JP', serif;
+    /* border: 2px solid red; */
+}
+
+.name {
+    font-size: 62px;
+    letter-spacing: 12px;
+}
+
+.text2 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-right: 22px;
+}
+
+.text3 {
+    display: block;
+    font-size: 24px;
+    letter-spacing: 16px;
+    margin-top: 14px;
+}
+
+.h {
+    /* color: green; */
+    /* color: #67B73F ; */
+    color: #4f8d31 ;
+}
+
+
+/* ---------------プロフィール--------------- */
+
+h2 {
+    display: block;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+    /* margin-left: 200px;
+    margin-right: 200px; */
+    width: 30%;
+    border-bottom: 3px solid #efefef;
+    padding-bottom: 12px;
+    letter-spacing: 3px;
+}
+
+
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-top:10px;
+}
+
+.profle {
+    background-color: #72979C;
+    height: auto;
+    color: #efefef;
+    padding-top: 50px;
+    padding-bottom: 60px;
+
+}
+
+.profle2 {
+    display: flex;
+    justify-content: center;
+}
+
+.profle p {
+    max-width: 700px;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.jigazou {
+    display: flex;
+    justify-content: center;
+}
+
+.p {
+    color: #D0E4A5;
+}
+
+
+
+/* ---------------作品　バナー--------------- */
+
+.bannerpage {
+    /* background-color: #DDE5E5; */
+    background: -moz-linear-gradient(to bottom,#eaf1f1,#72979C 60%,#153337); 
+background: -webkit-linear-gradient(to bottom,#eaf1f1,#72979C 60%,#153337); 
+background: linear-gradient(to bottom,#eaf1f1,#72979C 60%,#153337); 
+}
+
+.section1 {
+
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.section1 h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.section2 h3 {
+    border-bottom: 3px solid #101010;
+    width: 40%;
+    height: 1.5em;
+    margin: 0 auto;
+}
+
+.section2 p {
+    padding-top: 10px;
+}
+
+.works {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 90px;
+}
+
+.works h2 {
+    border-bottom:3px solid #333333;
+}
+
+.w {
+    color: #4f8d31 ;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+
+.card {
+    width: 300px;
+    background: #fff;
+    border-radius: 5px;
+    /* box-shadow: 0 2px 5px #ccc; */
+    border: 1px solid #333333;
+    margin-left: 30px;
+    margin-right: 40px;
+    margin-bottom: 50px
+  }
+  .card-img {
+    border-radius: 5px 5px 0 0;
+    max-width: 100%;
+    height: auto;
+  }
+  .card-content {
+    padding: 20px;
+  }
+  .card-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  .card-text {
+    color: #777;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .card-link {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding: 20px;
+  }
+  .card-link a {
+    text-decoration: none;
+    color: #0bd;
+    margin: 0 10px;
+  }
+  .card-link a:hover {
+    color: #0090aa;
+  }
+
+
+  .banner2 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 1100px;
+  }
+
+  .banner2 p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-top: 25px;
+  }
+  .bannertext {
+    margin-right: 30px;
+  }
+
+
+  .bannertext2 {
+    margin-right: 70px;
+  }
+
+  
+  .banner2 img {
+    margin-left: 30px;
+    margin-right: 50px;
+  }
+
+  .banner3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .banner3 p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px;
+  }
+
+
+  .section2 {
+    margin-top: 80px;
+  }
+
+  .banner4 {
+    margin: 0 auto;
+    width: 1000px;
+    padding-bottom: 100px;
+  }
+
+  .banner4 h3 {
+    font-size: 30px;
+    margin-top: 60px;
+    font-weight: bold;
+  }
+
+  .banner4 p {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 16px;
+    line-height: 1.2;
+  }
+
+
+
+/* ---------------作品　WEBサイト--------------- */
+
+
+.website {
+    width: 80%;
+    padding-top: 80px;
+    margin: 0 auto;
+    height: auto;
+}
+
+
+.website p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+    padding-top: 30px;
+
+}
+
+.website img {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #dddddd;
+  
+  border-radius: 3px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+.website a {
+    z-index: 5;
+}
+
+.workswebsite {
+    font-size: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 80px;
+}
+
+.workswebsite h3 {
+    margin-top: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.website h3 {
+    padding-top: 50px;
+    border-bottom:3px solid #333333;
+    width: 50%;
+    height: 3.2em;
+    margin: 0 auto;
+}
+
+
+
+/* ---------------フッター--------------- */
+
+footer {
+    background-color: #153337;
+    height: 220px;
+}
+
+footer p {
+    color: #efefef;
+    font-size: 26px;
+    text-align: center;
+    align-items: center;
+    padding-top: 90px;
+    font-family: 'Noto Serif JP', serif;
+}
+
+footer small {
+    display: block;
+    color: #efefef;
+    text-align: center;
+    padding-top: 6px;
+    letter-spacing: 1.4px;
+    line-height: 1.5;
+    font-family: 'Noto Serif JP', serif;
+}
+
+
+/* solid019 */
+
+.button_solid019 {
+      padding-bottom: 60px;
+}
+
+
+.button_solid019 a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #153337;
+    filter: drop-shadow(0px 2px 4px #ccc);
+    border-radius: 3px;
+    border-radius: 50px;
+}
+.button_solid019 a:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #FFF;
+    border-right: 3px solid #FFF;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 46%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.button_solid019 a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+}
+
+
+
+@media (max-width:959px) {
+
+	body {
+        max-width: 100%;
+        height: auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        
+        margin: 0 auto;
+        padding-top: 30px;
+        width: 50%;
+    }
+
+    .container{
+        max-width: 100%;
+        padding: 0;
+        margin: 0 auto;
+
+    }
+
+    .mvtext {
+        width: auto;
+        margin: auto;
+        padding-top: 100px;
+    }
+
+    .name {
+        font-size: 48px;
+    }
+    .text2 {
+        font-size: 40px;
+    }
+    .text3 {
+        font-size: 37px;
+    }
+
+   
+
+    .gnav {
+        width: auto;
+        margin: 0 auto;
+        padding-left: 30px;
+    }
+
+    .gnav li {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+
+    .profle {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        padding-bottom: 30px;
+    }
+
+    .prof {
+        display: none;
+    }
+
+    /* ---------------作品　バナー--------------- */
+
+    .banner {
+        width: 80%;
+       margin-bottom: 50px;
+    }
+
+    .card {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .banner2 {
+        width: 80%;
+        flex-direction: column;
+    
+       }
+
+       .banner3 {
+        width: 80%;
+        margin-left: 60px;
+       }
+    
+       .bannertext {
+        width: 85%;
+        margin-bottom: 20px;
+       }
+       .bannertext2 {
+        width: 85%;
+
+       }
+    
+       .bannertext3 {
+        width: 85%;
+       }
+    
+       .banner4 {
+        width: 100%;
+       }
+
+}
+
+
+@media (max-width:600px) {
+
+    
+    body {
+        max-width: 100%;
+        height: auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    h1 {
+        margin: 0 auto;
+        padding: 0;
+        width: 50%;
+    }
+
+    li {
+        font-size: 30px;
+    }
+
+
+    .logo{
+        display: none;
+        max-width: 100%;
+        height: auto;
+        width: 100px;
+        height: 100px;
+        
+    }
+
+    .mvtext {
+        width: auto;
+        margin: auto;
+        padding-top: 65px;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+    .text2 {
+        font-size: 28px;
+    }
+    .text3 {
+        font-size: 30px;
+    }
+
+    .navi {
+        padding-top: 30px;
+    }
+
+    .gnav {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding-right: 25px;
+    }
+
+    .gnav li {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+
+    .profle {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        padding-bottom: 30px;
+    }
+
+    .profle p {
+        margin: 0 auto;
+        max-width: 450px;
+        font-size: 16px;
+    }
+
+    .sp {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .single-item {
+        display: none;
+        
+    }
+
+    .gnav li a {
+        background: #DDE5E5;
+        /* border-right: 1px solid #eee; */
+        color: #3c3c3c;
+        display: block;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+    }
+    
+    .gnav li a:hover {
+        background-color: #DDE5E5;
+        color: #3c3c3c;
+    }
+
+   /* ---------------作品　バナー--------------- */
+   
+   body {
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+   }
+
+   .banner{
+    width: 80%;
+    flex-direction: column;
+   }
+
+   .card {
+    width: 60%;
+    margin-bottom: 40px;
+}
+
+   .banner2 {
+    width: 80%;
+    flex-direction: column;
+
+   }
+
+   .bannertext {
+    width: 85%;
+    margin-bottom: 20px;
+   }
+
+   .bannertext3 {
+    width: 86%;
+    margin-right: 20px;
+   }
+
+   .banner4 {
+    width: 100%;
+   }
+
+   .banner4 p {
+    line-height: 1.4;
+    margin-top: 20px;
+   }
+
+
+
+
+
+}
+
+@media (max-width:400px) {
+
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+        height: auto;
+       }
+
+    h1 {
+        margin: 0 auto;
+        padding: 0;
+        width: 60%;
+
+    }
+
+    .sp {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .name {
+        font-size: 27px;
+    }
+    .text2 {
+        font-size: 18px;
+        padding-top: 12px;
+    }
+    .text3 {
+        font-size: 18px;
+    }
+
+    .gnav {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .gnav li {
+        width: 200px;
+        margin: 0 auto;
+        font-size:24px;
+    }
+
+
+    .profle {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        padding-bottom: 30px;
+    }
+
+    .profle p {
+        margin: 0 auto;
+        width: 250px;
+        font-size: 14px;
+    }
+
+    .prof {
+        display: none;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    .gnav li a {
+        background: #DDE5E5;
+        /* border-right: 1px solid #eee; */
+        color: #3c3c3c;
+        display: block;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+    }
+    
+    .gnav li a:hover {
+        background-color: #DDE5E5;
+        color: #3c3c3c;
+    }
+
+    /* ---------------作品　バナー--------------- */
+
+    /* body {
+        max-width: 100%;
+        margin: 0 auto;
+        height: auto; 
+       } */
+
+       /* .container {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+       } */
+
+    /* .banner{
+        width: 100%;
+        flex-direction: column;
+       }
+    
+       .banner2 {
+        width: 100%;
+        flex-direction: column;
+    
+       }
+    
+       .bannertext {
+        width: 85%;
+        margin-bottom: 20px;
+       }
+    
+       .bannertext3 {
+        width: 85%;
+       }
+    
+       .banner4 {
+        width: 100%;
+       } */
+    
+
+   
+
+}
