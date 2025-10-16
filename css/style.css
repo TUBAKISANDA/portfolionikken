@@ -558,7 +558,7 @@ background: linear-gradient(to bottom,#eaf1f1,#72979C 60%,#153337);
 }
 
 .website h3 {
-    padding-top: 50px;
+    padding-top: 18px;
     border-bottom:3px solid #333333;
     width: 50%;
     height: 3.2em;
@@ -907,11 +907,11 @@ footer small {
    }
 
    .banner4 h3 {
-        font-size: 16px;
+    font-size: 16px;
     }
 
     .website h3 {
-        font-size: 14px;
+     font-size: 14px;
         
     }
 
